@@ -24,3 +24,4 @@ if (Get-Service -Name gorelo.rmm.shell -ErrorAction Ignore) {
 
 # Remove the folder recursively and forcefully without prompting
 Remove-Item -path "$Env:ProgramFiles\Gorelo" -Recurse -Force -ErrorAction Ignore -Confirm:$false;
+Remove-Item -Path "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Gorelo" -Recurse;
